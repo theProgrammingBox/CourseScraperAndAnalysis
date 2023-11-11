@@ -28,7 +28,7 @@ driver.get(url)
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "j_username"))).send_keys(username)
 WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "j_password"))).send_keys(password, Keys.ENTER)
 
-WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "what-if")))
+time.sleep(1)
 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "what-if"))).click()
 
 WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "major_label_value"))).click()
